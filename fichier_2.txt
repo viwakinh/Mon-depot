@@ -1,0 +1,30 @@
+./jq 
+JSON comme un pro
+jq est un utilitaire pratique puissant
+Avant de parler de jq, il faut parler d’abord de JSON
+Qu’est-ce que le JSON ?
+C’est un format de représentation des données qui a envahi notre quotidien. On le retrouve dans le navigateur avec le JavaScript, dans les APIs, le fichiers de configuration, les bases de données. Le JSON est devenu populaire à cause de JavaScript qui est devenu populaire. C’est un format simple et lisible par des humains. 
+Un document JSON est un amas de données (ou un flux de données) compactées. 
+Pour accéder aux données dans un fichier JSON, on utilisait avant jq les utilitaires comme sed, awk et grep qui ne sont pas très adaptés pour extraire des informations dans un fichier JSON. 
+Sous Unix dans la philosophie GNU, un outil fait une seule tâche et le fait plutôt bien. Si on regarde du côté GNU, les utilitaires que nous avons pour manipuler les documents sont : 
+Xmlstarlet pour manipuler les documents du type <XML />, pup pour <html> et ./jq pour {JSON} , yq pour YAML. Yq a les mêmes syntaxes que jq
+./jq est désormais plus qu’un utilitaire et est devenu un langage
+Jq.org permet de tester les documents écrits dans ce langage 
+Quand est-ce que ./jq va pouvoir nous aider ? 
+-	Explorer et chainer des APIs JSON
+o	Github
+o	Elastic Search
+o	Docker
+o	AWS
+o	…
+-	Explorer des dumps JSON
+o	Extraire des bases de données
+o	Webscraping
+o	Agrégation et analyse de données
+o	Intégration simple 
+o	Mini ETL
+-	./jq permet aussi de formater du JSON pour le formater dans d’autres formats (csv, xlsx, ) exploitables dans d’autres systèmes.
+./jq a deux modes d’invocations qui reprennent la philosophie GNU
+-	Le premier : stdin → jq <filter>  → stdout 
+ Il pend sur le flux en entrée standard un docuement JSON, on l’appelle en lui donnant un filtre et il va produire le résultat sur la sortie standard. 
+
